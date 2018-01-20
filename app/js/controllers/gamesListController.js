@@ -1,7 +1,7 @@
 angular.module('rangde.controllers',['ui.router'])
 	.controller('gamesListController',['$scope','dataServices','$state','$stateParams','$rootScope',function($scope,dataServices,$state,$stateParams,$rootScope){
 
-	      $scope.headerTitle="Rang De Games Arena";  //Text to display in top header
+	      $scope.headerTitle="Cogoport Games Arena";  //Text to display in top header
 		
      /* Variables are declared for pagination purpose */
 	     $scope.currentPage = 1;  //Always show first page
