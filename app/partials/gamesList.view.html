@@ -24,9 +24,9 @@
 				    </div>
 		   </div>
 		   <div class="all-games-container">
-			   <div ng-repeat="item in listsOfGames| filter: searchKeyword | orderBy: sortTextBy"  class="game-item" style="line-height:1;">
+			   <div ng-repeat="item in listsOfGames| filter: searchKeyword | orderBy: sortTextBy"  class="game-item">
 				   <div class="name-section">
-					<div class="repoitem-title">{{item.title}}
+					<div class="game-title">{{item.title}}
 				        </div>
 					<div class="platform">{{item.platform}}</div>
 				  </div>
@@ -35,8 +35,8 @@
 						
 					    </div>
 					    <div class="choice-section align-center">
-						<i ng-if="item.editors_choice=='Y'" class="fa fa-check" style="font-size:48px;color:green"></i>
-						<i ng-if="item.editors_choice=='N'" class="fa fa-times" style="font-size:48px;color:red"></i>
+						<i ng-if="item.editors_choice=='Y'" class="fa fa-check color-green"></i>
+						<i ng-if="item.editors_choice=='N'" class="fa fa-times color-red"></i>
 					    </div> 
 			   </div>
 		   </div>
