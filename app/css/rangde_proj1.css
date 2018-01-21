@@ -8,6 +8,7 @@
 		padding:10px;
 		flex-basis:90%;
 		display:flex;
+		   flex-wrap: wrap;
 	}	
 	.header-section {
 		background-color:rgb(255,0,0);
@@ -19,10 +20,7 @@
 		flex-basis:10%;
 	}
 	
-	.align-center {
-		text-align:center;
-		
-	}
+	
 	
 	.align-left {
 		text-align:left;
@@ -38,14 +36,15 @@
 		font-size: 26px;
 		text-align: left;
 	}
+
+
 	
 	.repoitem-title {
 		color:rgb(255,0,0);
 		    font-size: 18px;
-		font-weight:600;
 	}
 	.game-item {
-		padding:15px;
+		padding:10px;
 		cursor:pointer;	
     		font-size: x-large;
 		text-align:left;
@@ -127,14 +126,67 @@
 
 	.game-item .score-section,.list-header .score-section {
 		flex-basis: 15%;
-		text-align:left;
+		
 	}
 
 	.game-item .choice-section,.list-header .choice-section {
 		flex-basis: 15%;
-		text-align:left;
 	}
 
 	.platform {
 		    font-size: 17px;
+	}
+
+	.align-center {
+		text-align:center;	
+	}
+
+	.sorting-section {
+		flex-basis:17%;
+		border: 2px solid rgb(175,175,175);
+    		margin-right: 10px;
+    		border-radius: 6px;
+    		display:flex;
+		flex-direction:column;
+	}
+
+	.sorting-section .filter-label {
+		color:black;
+		text-align: center;
+		font-weight: bold;
+		font-size: 17px;
+		background-color: rgb(228,228,228);
+		padding: 11px;
+	}
+
+	.sorting-section .score-text {
+		    font-weight: bold;
+    		    padding-left: 10px;
+	            margin-top: 11px;
+	}
+
+	 form {
+		        padding-left: 18px;
+			margin-top: 5px;
+			    margin-bottom: 10px;
+	}
+
+	input[type=radio] {
+		margin-right:5px;
+	}
+
+	@media all and (max-width:700px) {
+		.body-section {
+			flex-direction:column;
+		}
+		.sorting-section {
+			    flex: 0 0 auto;
+			    margin-bottom: 20px;
+				    margin-right: 0px;
+		}
+
+		.games-details {
+			flex:1;
+		}
+	
 	}

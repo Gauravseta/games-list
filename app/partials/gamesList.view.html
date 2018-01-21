@@ -1,5 +1,14 @@
 <div class="header-section">{{headerTitle}}</div>
 <div class="body-section">
+	   <div class="sorting-section">
+		<div class="filter-label">Filter</div>
+		<div class="score-text">Score</div>
+		<form >
+			
+		   	<input type="radio" ng-click="sort('score')" name="filtertype" value="Ascending" checked>Ascending<br>
+			<input type="radio" ng-click="sort('-score')" name="filtertype" value="Descending">Descending<br>
+		</form>
+	   </div>
 	   <div class="games-details">
 		   <div class="search-section">
 			<div class="search-bar"><input type="text" value="search" ng-model="searchKeyword"></input><span>Search</span></div>
@@ -8,24 +17,26 @@
 				<div class="name-section">
 					Name
 				  </div>
-				    <div class="score-section">
+				    <div class="score-section align-center">
 				      Score
 				    </div>
-				    <div class="choice-section">Editors Choice
+				    <div class="choice-section align-center">Editors Choice
 				    </div>
 		   </div>
 		   <div class="all-games-container">
-			   <div ng-repeat="item in listsOfGames| filter: searchKeyword"  class="game-item" style="line-height:1;">
+			   <div ng-repeat="item in listsOfGames| filter: searchKeyword | orderBy: sortTextBy"  class="game-item" style="line-height:1;">
 				   <div class="name-section">
 					<div class="repoitem-title">{{item.title}}
 				        </div>
 					<div class="platform">{{item.platform}}</div>
 				  </div>
-					    <div class="score-section">
-					      <img src="images/star_black.svg"></img>{{item.score}}
+					    <div class="score-section align-center">
+					      {{item.score}}
 						
 					    </div>
-					    <div class="choice-section">{{item.editors_choice}}
+					    <div class="choice-section align-center">
+						<i ng-if="item.editors_choice=='Y'" class="fa fa-check" style="font-size:48px;color:green"></i>
+						<i ng-if="item.editors_choice=='N'" class="fa fa-times" style="font-size:48px;color:red"></i>
 					    </div> 
 			   </div>
 		   </div>

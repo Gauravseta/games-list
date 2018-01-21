@@ -9,6 +9,11 @@ angular.module('rangde.controllers',['ui.router'])
 	     $scope.maxSize = 10;    //Pagination items available at max
 
 	     $scope.searchKeyword='';
+	     $scope.sortTextBy='score';
+
+	     $scope.sort=function(text){
+			$scope.sortTextBy=text;
+		}
 
 	     $scope.sortSelection=false;
 	     $scope.$watch('sortSelection',function(curr,old){
