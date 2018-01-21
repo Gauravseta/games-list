@@ -1,6 +1,11 @@
-	body,html {
+	html {
 		height:100%;
 		width:100%;
+	}
+
+	body {
+		    height: 100%;
+    		margin-top: -8px;
 	}
 	.body-section {
 		height:100%;
@@ -17,7 +22,7 @@
 		color:white;
 		font-size: xx-large;
 		    font-weight: bold;
-		flex-basis:10%;
+		    flex: 0 0 auto;
 	}
 	
 	

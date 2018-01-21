@@ -1,5 +1,5 @@
 
-angular.module("rangDeApp",['rangde.controllers','rangde.services','ui.router','ui.bootstrap'])
+angular.module("mainApp",['games.controllers','games.services','ui.router'])
 		.config(function($stateProvider,$urlRouterProvider){
 			$urlRouterProvider.otherwise("/gamesList");
 			$stateProvider.state('gamesList',{
@@ -10,8 +10,7 @@ angular.module("rangDeApp",['rangde.controllers','rangde.services','ui.router','
 			
 			
 		})
-		.controller("rangDeController",['$scope','dataServices','$rootScope',function($scope,dataServices,$rootScope){
-			
-			$scope.obj={};		
+		.controller("mainController",['$scope','dataServices','$rootScope',function($scope,dataServices,$rootScope){
+			/* any initialization at parent can be done here */		
 		}]);
 
